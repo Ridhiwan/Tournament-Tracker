@@ -34,7 +34,7 @@
             placeNameLabel = new Label();
             placeNameValue = new TextBox();
             prizeAmountLabel = new Label();
-            prixeAmountValue = new TextBox();
+            prizeAmountValue = new TextBox();
             prizePercentageValue = new TextBox();
             prizePercentageLabel = new Label();
             orLabel = new Label();
@@ -54,6 +54,7 @@
             // 
             // placeNumberValue
             // 
+            placeNumberValue.Font = new Font("Segoe UI", 13F);
             placeNumberValue.Location = new Point(187, 83);
             placeNumberValue.Multiline = true;
             placeNumberValue.Name = "placeNumberValue";
@@ -84,6 +85,7 @@
             // 
             // placeNameValue
             // 
+            placeNameValue.Font = new Font("Segoe UI", 13F);
             placeNameValue.Location = new Point(187, 140);
             placeNameValue.Multiline = true;
             placeNameValue.Name = "placeNameValue";
@@ -101,21 +103,25 @@
             prizeAmountLabel.TabIndex = 17;
             prizeAmountLabel.Text = "Prize Amount";
             // 
-            // prixeAmountValue
+            // prizeAmountValue
             // 
-            prixeAmountValue.Location = new Point(187, 201);
-            prixeAmountValue.Multiline = true;
-            prixeAmountValue.Name = "prixeAmountValue";
-            prixeAmountValue.Size = new Size(140, 33);
-            prixeAmountValue.TabIndex = 18;
+            prizeAmountValue.Font = new Font("Segoe UI", 13F);
+            prizeAmountValue.Location = new Point(187, 201);
+            prizeAmountValue.Multiline = true;
+            prizeAmountValue.Name = "prizeAmountValue";
+            prizeAmountValue.Size = new Size(140, 33);
+            prizeAmountValue.TabIndex = 18;
+            prizeAmountValue.Text = "0";
             // 
             // prizePercentageValue
             // 
+            prizePercentageValue.Font = new Font("Segoe UI", 13F);
             prizePercentageValue.Location = new Point(202, 298);
             prizePercentageValue.Multiline = true;
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(125, 33);
             prizePercentageValue.TabIndex = 20;
+            prizePercentageValue.Text = "0";
             // 
             // prizePercentageLabel
             // 
@@ -153,6 +159,7 @@
             createPrizeButton.TabIndex = 27;
             createPrizeButton.Text = "Create Prize";
             createPrizeButton.UseVisualStyleBackColor = true;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
@@ -164,7 +171,7 @@
             Controls.Add(orLabel);
             Controls.Add(prizePercentageValue);
             Controls.Add(prizePercentageLabel);
-            Controls.Add(prixeAmountValue);
+            Controls.Add(prizeAmountValue);
             Controls.Add(placeNameValue);
             Controls.Add(prizeAmountLabel);
             Controls.Add(placeNameLabel);
@@ -185,7 +192,7 @@
         private Label placeNameLabel;
         private TextBox placeNameValue;
         private Label prizeAmountLabel;
-        private TextBox prixeAmountValue;
+        private TextBox prizeAmountValue;
         private TextBox prizePercentageValue;
         private Label prizePercentageLabel;
         private Label orLabel;
