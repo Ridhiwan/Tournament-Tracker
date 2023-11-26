@@ -12,7 +12,6 @@ namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
-        // TODO - Make the CreatePrize method actually save to the database
         /// <summary>
         /// Saves a new prize in the database
         /// </summary>
@@ -21,7 +20,7 @@ namespace TrackerLibrary.DataAccess
         public PrizeModel CreatePrize(PrizeModel model)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            using (IDbConnection connection = new SqlConnection(builder.ConnectionString = "Server=tcp:tournament-tracker-project.database.windows.net,1433;Initial Catalog=Tournaments;Encrypt=True;TrustServerCertificate=False;Connection Timeout=1200;Authentication=\"Active Directory Default\";"))
+            using (IDbConnection connection = new SqlConnection(builder.ConnectionString = "Server=tcp:tournament-tracker-project.database.windows.net,1433;Initial Catalog=Tournaments;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3600;Authentication=\"Active Directory Default\";"))
             {
                 connection.Open();
 
